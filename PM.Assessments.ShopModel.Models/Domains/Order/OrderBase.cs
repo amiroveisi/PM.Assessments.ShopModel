@@ -41,6 +41,17 @@ namespace PM.Assessments.ShopModel.Models.Domains.Order
         /// </summary>
         public required Customer IssuedTo { get; init; }
         /// <summary>
+        /// The shipping address for this order. 
+        /// It can be filled with the customer address by default.
+        /// If all of the products were digital, this address can be null.
+        /// </summary>
+        public required Address? ShippingAddress { get; set; }
+        /// <summary>
+        /// The billing address of this order.
+        /// It can be filled with the customer address by default.
+        /// </summary>
+        public required Address BillingAddress { get; set; }
+        /// <summary>
         /// The order status.
         /// </summary>
         public OrderStatus Status { get; set; }

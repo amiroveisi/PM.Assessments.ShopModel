@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PM.Assessments.ShopModel.Models.Domains.Order;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,5 +42,10 @@ namespace PM.Assessments.ShopModel.Models.Domains.ShoppingCart
         /// This method will clear all items of the shopping cart.
         /// </summary>
         public abstract void Clear();
+        /// <summary>
+        /// This method checks out the shopping cart and creates an order with pending status.
+        /// </summary>
+        /// <returns></returns>
+        public abstract OrderBase CheckOut();
     }
 }

@@ -21,10 +21,15 @@ namespace PM.Assessments.ShopModel.Models
         /// </summary>
         public required string Username { get; init; }
         /// <summary>
-        /// The address of the user. this address will be used as the default delivery address.
-        /// If the address was null, user can not purchase any product that needs delivery by post.
+        /// The address of the user. this address will be used as the billing address.
+        /// If the address was null, user can not purchase any product.
         /// </summary>
-        public Address? Address { get; set; }
+        public Address? BillingAddress { get; set; }
+        /// <summary>
+        /// The address of the user. this address will be used as the delivery address.
+        /// If the address was null, user can not purchase any products that needs delivery by post.
+        /// </summary>
+        public Address? ShippingAddress { get; set; }
         /// <summary>
         /// The email address of the user.
         /// This email will be used in password reset operation and also delivering digital products.
